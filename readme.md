@@ -14,14 +14,16 @@ new_page.merge_page(page_to_merge, expand=True)
 ```
 
 The result is not what I was expecting:
+
+(`results/merged_not_ok.pdf` preview)
 ![Unexpected behavior](images/merged_not_ok.png)
 
 But if I look at the wireframe I can see something happens. I suspect the translation is occuring on the page objects, but not on the trimbox:
-
+(`results/merged_not_ok.pdf` wireframe)
 ![Wireframe view](images/merged_not_ok_wf.png)
 
 Although the `mergeTranslatedPage` method works as intended:
-
+(`results/merged_ok.pdf` preview)
 ![Expected behavior](images/merged_ok.png)
 
 So, what's the big deal? Why don't I just use `mergeTranslatedPage` then?
